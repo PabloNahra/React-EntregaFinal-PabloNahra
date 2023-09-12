@@ -1,0 +1,15 @@
+main {
+    /* background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%); */
+    font-family: 'Alkatra', cursive, 'Gill Sans', 'Gill Sans MT';
+    font-size: x-large;
+    color: #ff086b;
+    text-align: center;
+    padding: 0%;
+    min-width: 100%;
+    min-height: 90vh;
+}
+
+main h1 {
+    font-size: 40px;
+}
+

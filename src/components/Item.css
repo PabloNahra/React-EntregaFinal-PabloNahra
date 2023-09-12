@@ -1,0 +1,11 @@
+li {
+    display: inline-block;
+    font-size: x-large;
+    font-weight: bold;
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px; 
+    padding: 5px;
+    color: blue;
+}

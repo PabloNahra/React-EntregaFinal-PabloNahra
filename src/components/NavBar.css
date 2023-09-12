@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0; }
+  
+.header {
+    background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%); 
+}
+  
+#navbarSupportedContent ul li {
+    display: inline-block;
+    font-size: x-large;
+    font-weight: bold;
+    font-family: 'Delicious Handrawn', cursive, 'Gill Sans', 'Gill Sans MT';
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px; }
+
+.header-centrado {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-around !important; 
+}      
+
+.logo-principal {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: center; }
+    .logo-principal img {
+    max-width: 100px;
+    max-height: 100px; }
+
+.lista-pages {
+    justify-content: flex-end; }
+    .lista-pages li a {
+    color: #ff086b;
+    text-decoration: none; 
+}
+
+header nav div section h1{
+    color: #ff086b;
+    font-size: 20px;
+    padding: 10px;
+}
+
+/* PSEUDOCLASES*/
+.escalar:hover {
+    transform: scale(1.2); 
+}
