@@ -2,7 +2,7 @@
     {
         "id": "1",
         "categoria": "bebe",
-        "nombre": "Amiguris 1",
+        "nombre": "Amiguris",
         "descripcion": "Juguete para su bebe 1",
         "precio": 100,
         "imagen": "../src/assets/img-productos/amiguris.png"
@@ -10,7 +10,7 @@
     {
         "id": "2",
         "categoria": "bebe",
-        "nombre": "Amiguris 2",
+        "nombre": "Amiguris - 2",
         "descripcion": "Juguete para su bebe 2",
         "precio": 200,
         "imagen": "../src/assets/img-productos/amiguris.png"

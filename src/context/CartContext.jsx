@@ -45,15 +45,11 @@ export const CartProvider = ({children}) => {
         return cart.some(prod => prod.id === itemId)
     }
 
-    const totalQuantity = () => {
-        return "50"
-    }
-
     const total = tot
     const totalCant = totQuantity
 
     return (
-        <CartContext.Provider value={{cart, addItem, removeItem, clearCart, isInCart, totalQuantity, total, totalCant}}>
+        <CartContext.Provider value={{cart, addItem, removeItem, clearCart, isInCart, totQuantity, tot, total, totalCant}}>
             {children}
         </CartContext.Provider>
     )
