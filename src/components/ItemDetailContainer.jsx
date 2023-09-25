@@ -6,6 +6,7 @@ import { useEffect as useEffect2, useState as useState2 } from "react";
 import catalogoProductos from "../productos.json"
 
 function asynkMockItem(itemId){
+
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if(!itemId){
@@ -13,11 +14,11 @@ function asynkMockItem(itemId){
       }
       else{
         const catalogoFiltrado = catalogoProductos.filter((valor) =>{
-          return valor.id == itemId
+          return valor.id === String(itemId)
         })
         resolve (catalogoFiltrado)
       }
-    }, 2000)
+    }, 500)
   })
 }
 
@@ -38,7 +39,6 @@ export default function ItemDetailContainer(props){
   if (loading2) {
     return <h1>Item no encontrado</h1>
   }
-  
 
       return(
         <main>

@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0; }
+
+.Contador {
+    display: inline-block;
+    justify-content: flex-end; 
+    display: inline-block;
+    background-color: #ff086b;
+ }
+
+.Controles {
+    display: inline-block;
+    justify-content: flex-end; 
+    color: black;
+    background-color: #e984ac;
+    font-size: 20px;
+}
+
+.escalar:hover {
+    transform: scale(1.1); 
+}

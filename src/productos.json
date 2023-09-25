@@ -3,7 +3,7 @@
         "id": "1",
         "categoria": "bebe",
         "nombre": "Amiguris 1",
-        "descripcion": "Jueguete para su bebe 1",
+        "descripcion": "Juguete para su bebe 1",
         "precio": 100,
         "imagen": "../src/assets/img-productos/amiguris.png"
     },
@@ -11,7 +11,7 @@
         "id": "2",
         "categoria": "bebe",
         "nombre": "Amiguris 2",
-        "descripcion": "Jueguete para su bebe 2",
+        "descripcion": "Juguete para su bebe 2",
         "precio": 200,
         "imagen": "../src/assets/img-productos/amiguris.png"
     },
@@ -19,7 +19,7 @@
         "id": "3",
         "categoria": "bebe",
         "nombre": "Amiguris 3",
-        "descripcion": "Jueguete para su bebe 3",
+        "descripcion": "Juguete para su bebe 3",
         "precio": 300,
         "imagen": "../src/assets/img-productos/amiguris.png"
     },
@@ -27,7 +27,7 @@
         "id": "4",
         "categoria": "bebe",
         "nombre": "Amiguris 4",
-        "descripcion": "Jueguete para su bebe 4",
+        "descripcion": "Juguete para su bebe 4",
         "precio": 400,
         "imagen": "../src/assets/img-productos/amiguris.png"
     },
@@ -35,7 +35,7 @@
         "id": "5",
         "categoria": "bebe",
         "nombre": "Amiguris 5",
-        "descripcion": "Jueguete para su bebe 5",
+        "descripcion": "Juguete para su bebe 5",
         "precio": 500,
         "imagen": "../src/assets/img-productos/amiguris.png"
     },
@@ -43,7 +43,7 @@
         "id": "6",
         "categoria": "bebe",
         "nombre": "Amiguris 6",
-        "descripcion": "Jueguete para su bebe 6",
+        "descripcion": "Juguete para su bebe 6",
         "precio": 600,
         "imagen": "../src/assets/img-productos/amiguris.png"
     },
