@@ -4,14 +4,12 @@ import "./NavBar.css";
 import { Link, NavLink } from 'react-router-dom';
 
 export default function NavBar(props){
-
     return(
         <header>
             <nav className="navbar navbar-expand-md navbar-dark" id="navbar">
                 <div className="container-fluid header-centrado">
                     <section class="logo-principal">
                     <a class="navbar-brand" href="#">
-                        {/* <a href="./index.html"><img src={logoArtMatuiz} alt="Logo"/></a> */}
                         <Link to="/"><img src={logoArtMatuiz} alt="Logo"/></Link>
                     </a>
                     </section>
@@ -32,7 +30,3 @@ export default function NavBar(props){
         </header>
     )
 }
-
-
-
-

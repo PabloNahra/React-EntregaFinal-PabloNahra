@@ -1,6 +1,5 @@
 import { collection, getFirestore, addDoc } from "firebase/firestore"
 import React, { Component, useState } from "react"
-import { render } from "react-dom"
 import { CartContext } from "../context/CartContext";
 import { useContext } from "react";
 
@@ -11,6 +10,7 @@ export default function CheckOut() {
   const [phone, setPhone] = useState("");
 
   const [orderId, setOrderId] = useState();
+  const [error, setError] = useState("");
 
   const {cart, tot, clearCart} = useContext(CartContext);
 
@@ -26,6 +26,18 @@ export default function CheckOut() {
   }
 
   function crearOrden(){
+
+    if (!name || !email || !phone) {
+      setError("Por favor, complete todos los campos.");
+      return; 
+    }
+
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (!emailPattern.test(email)) {
+      setError("Por favor, ingrese un correo electrónico válido.");
+      return;
+    }
+  
 
     const items = cart.map(item => ({
       id: item.id,
@@ -63,12 +75,13 @@ export default function CheckOut() {
   return (
     <div>
       <h1>Tus Datos</h1>
+      {error && <p style={{ color: "red" }}>{error}</p>}
       <form onSubmit={(e) => e.preventDefault()} style={{display:'flex', flexDirection: 'column', gap:'15px'}} >
         <label>Nombre
           <input type="text" value={name} onChange={handleChange} />
         </label>
         <label>Email
-          <input type="mail" value={email} onChange={handleChange2} />
+          <input type="email" value={email} onChange={handleChange2} required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"/>
         </label>
         <label>Telefono
           <input type="text" value={phone} onChange={handleChange3} />

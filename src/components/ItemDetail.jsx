@@ -1,7 +1,6 @@
 import ItemDet from "./ItemDet";
 
 export default function ItemDetail({productos}) {
-  
     return (
       <div>
         <ul>

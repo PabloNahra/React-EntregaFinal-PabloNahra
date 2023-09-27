@@ -1,9 +1,7 @@
 import { createContext, useState } from "react";
 
 export const CartContext = createContext(
-    {
-        cart: []
-    }
+    {cart: []}
 )
 
 export const CartProvider = ({children}) => {
@@ -23,10 +21,24 @@ export const CartProvider = ({children}) => {
 
     }
 
-
     const removeItem = (itemId) => {
         const cartUpdated = cart.filter(prod => prod.id !== itemId)
         setCart(cartUpdated)
+
+        if (cartUpdated.length === 0) {
+            clearCart();
+          }else{
+                const newTotal = cartUpdated.reduce((accumulator, item) => {
+                    return accumulator + item.price * item.quantity;
+                }, 0);
+            
+                setTotal(newTotal);
+
+                const newQuantity = cartUpdated.reduce((accumulator, item) => {
+                    return accumulator + item.quantity;
+                }, 0);
+                setTotQuantity(newQuantity);
+          }
     }
 
     const clearCart = () => {

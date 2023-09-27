@@ -28,7 +28,6 @@
                     Agregar al carrito
                 </button>
             </div>
-
-        </div>
+       </div>
     )
 }

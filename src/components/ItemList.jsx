@@ -1,3 +1,4 @@
+import "./ItemList.css";
 import Item from "./Item";
 
 export default function ItemList({productos}) {

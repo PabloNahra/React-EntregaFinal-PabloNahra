@@ -1,18 +1,11 @@
 import './App.css'
 import NavBar from './components/NavBar'
 import ItemListContainer from './components/ItemListContainer'
-import Item from './components/Item'
-import ItemList from './components/ItemList'
 import ItemDetailContainer from './components/ItemDetailContainer'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import CheckOut from './components/CheckOut';
-import ItemCount from './components/ItemCount'
 import { CartProvider } from './context/CartContext'
 import Cart from './components/Cart'
-import ProbadoFirebase from './components/ProbandoFirebase'
-import ProbadoFirebaseColeccion from './components/ProbandoFirebaseColeccion'
-import ProbadoFirebaseColeccionConFiltros from './components/ProbandoFirebaseColeccionConFiltros'
-import ProbadoFirebaseInsertOrden from './components/ProbandoFirebaseInsertOrden'
 
 function App() {
   const marca = "ART MATUIZ"

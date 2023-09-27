@@ -1,57 +1,36 @@
 import "./ItemListContainer.css";
 import ItemList from './ItemList';
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-//import catalogoProductos from "../productos.json"
 import {collection, getDocs, getFirestore, query, where} from "firebase/firestore"
-
-// function asynkMock(categoryId){
-//   return new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       if(!categoryId){
-//         resolve(catalogoProductos)
-//       }
-//       else{
-//         const catalogoFiltrado = catalogoProductos.filter((valor) =>{
-//           return valor.categoria == categoryId
-//         })
-//         resolve (catalogoFiltrado)
-//       }
-//     }, 2000)
-//   })
-// }
 
 export default function ItemListContainer(props){
   const [categ, setCateg] = useState([]);
   const [loading, setLoading] = useState(false);
   const {categoryId} = useParams();
   
-  // useEffect(() => {
-  //   asynkMock(categoryId).then(res => setCateg(res)
-  //   )
-  // }, [categoryId]); 
-
   useEffect(() => {
-
     const db2 = getFirestore();
     const productsRef = collection(db2, "productos");
 
     if(!categoryId){
-      console.log("Sin categoryId")
       getDocs(productsRef).then((snapshot) => {
         if(snapshot.size !== 0){
-            setCateg(snapshot.docs.map(doc => {return{id: doc.id, ...doc.data()}}))
+            const sortedCateg = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+            sortedCateg.sort((a, b) => a.nombre.localeCompare(b.nombre));
+            setCateg(sortedCateg);
         }
     })
     }
     else{
-      console.log("Con categoryId")
       const db = getFirestore();
       const q = query(collection(db, "productos"), where("categoria", "==", categoryId));
 
       getDocs(q).then((snapshot) => {
         if(snapshot.size !== 0){
-          setCateg(snapshot.docs.map(doc => {return{id: doc.id, ...doc.data()}}))
+          const sortedCateg = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+          sortedCateg.sort((a, b) => a.nombre.localeCompare(b.nombre)); 
+          setCateg(sortedCateg);
         }else{
             <h1>No matcheo</h1>
         }})
