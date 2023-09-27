@@ -11,8 +11,6 @@ export const CartProvider = ({children}) => {
     const [tot, setTotal] = useState(0)
     const [totQuantity, setTotQuantity] = useState(0)
 
-    console.log(cart)
-
     const addItem = (item, quantity) => {
         if(!isInCart(item.id)){
             setCart(prev => [...prev, {...item, quantity}])
@@ -20,13 +18,9 @@ export const CartProvider = ({children}) => {
             const subtotal = (item.price * quantity)
             setTotal(tot + subtotal)
         } else {
-            console.error("Producto ya existente")
+            <h1>El producto ya existe en el carrito</h1>
         }
 
-        console.log("addItem - CartContext")
-        console.log(item)
-        console.log(quantity)
-        console.log(cart)
     }
 
 
@@ -53,6 +47,4 @@ export const CartProvider = ({children}) => {
             {children}
         </CartContext.Provider>
     )
-
-
 }

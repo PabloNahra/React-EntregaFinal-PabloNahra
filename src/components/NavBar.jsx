@@ -24,7 +24,6 @@ export default function NavBar(props){
                         <li className="escalar"><Link to="/category/casa">{props.link2}</Link></li>
                         <li className="escalar"><Link to="/queesartesania">{props.link3}</Link></li>
                         <li className="escalar"><Link to="/contacto">{props.link4}</Link></li>
-                        <li className="escalar"><Link to="/checkout">CheckOut</Link></li>
                     </ul>
                     </div>
                     <CartWidget/>

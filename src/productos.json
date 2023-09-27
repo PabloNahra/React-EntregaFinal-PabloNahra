@@ -43,7 +43,7 @@
         "id": "6",
         "categoria": "bebe",
         "nombre": "Amiguris 6",
-        "descripcion": "Juguete para su bebe 6",
+        "descripcion": "    ",
         "precio": 600,
         "imagen": "../src/assets/img-productos/amiguris.png"
     },

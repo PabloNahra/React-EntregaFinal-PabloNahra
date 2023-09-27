@@ -24,3 +24,10 @@ dist-ssr
 *.sw?
 
 src/pruebas.jsx
+
+src/components/ProbandoFirebase.jsx
+src/components/ProbandoFirebaseInsertOrden.jsx
+src/components/ProbandoFirebaseColeccion.jsx
+src/components/ProbandoFirebaseColeccionConFiltros.jsx
+src/components/ItemListContainer-BKP.jsx
+src/components/ItemDetail-BKP.jsx

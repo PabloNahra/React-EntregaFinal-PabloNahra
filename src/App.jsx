@@ -9,6 +9,10 @@ import CheckOut from './components/CheckOut';
 import ItemCount from './components/ItemCount'
 import { CartProvider } from './context/CartContext'
 import Cart from './components/Cart'
+import ProbadoFirebase from './components/ProbandoFirebase'
+import ProbadoFirebaseColeccion from './components/ProbandoFirebaseColeccion'
+import ProbadoFirebaseColeccionConFiltros from './components/ProbandoFirebaseColeccionConFiltros'
+import ProbadoFirebaseInsertOrden from './components/ProbandoFirebaseInsertOrden'
 
 function App() {
   const marca = "ART MATUIZ"
@@ -26,10 +30,8 @@ function App() {
             <Route exact path="/" element={<ItemListContainer greeting={containerPpal}/>} />
             <Route exact path="/category/:categoryId" element={<ItemListContainer greeting={containerPpal}/>} />
             <Route exact path="/item/:itemId" element={<ItemDetailContainer />} />
-            {/* <Route exact path="/pruebaitemcount" element={<p>Probando</p>} /> */}
             <Route exact path="/queesartesania" element={<p>Que es una artesania</p>} />
-            {/* <Route exact path="/contacto" element={<p>Contacto</p>} /> */}
-            <Route exact path="/contacto" element={<ItemCount inicial={1} stock={1000} onAdd={(cantidad) => console.log('Cantidad agregada ', cantidad)} />} />
+            <Route exact path="/contacto" element={<h1>Contacto</h1>} />
             <Route exact path="/checkout" element={<CheckOut/>} />
             <Route exact path="/cart" element={<Cart />} />
         </Routes>

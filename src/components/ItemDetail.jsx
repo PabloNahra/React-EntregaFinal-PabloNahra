@@ -2,19 +2,18 @@ import ItemDet from "./ItemDet";
 
 export default function ItemDetail({productos}) {
   
-
-  return (
+    return (
       <div>
         <ul>
-            {productos.map((producto) => (
+          {
                 <ItemDet 
-                id={producto.id} 
-                title={producto.nombre} 
-                description={producto.descripcion} 
-                image={producto.imagen} 
-                price={producto.precio}>
+                id={productos.id} 
+                title={productos.nombre} 
+                description={productos.descripcion} 
+                image={productos.imagen} 
+                price={productos.precio}>
                 </ItemDet>
-            ))}
+          }
         </ul>
       </div>
     );
