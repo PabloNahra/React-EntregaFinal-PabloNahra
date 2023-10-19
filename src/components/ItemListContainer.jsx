@@ -22,7 +22,6 @@ export default function ItemListContainer(){
     })
     }
     else{
-      // const db = getFirestore();
       const q = query(collection(db, "productos"), where("categoria", "==", categoryId));
 
       getDocs(q).then((snapshot) => {
