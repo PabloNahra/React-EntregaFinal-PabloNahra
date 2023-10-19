@@ -1,8 +1,8 @@
  import './ItemCount.css'
  import { useState } from "react";
 
- export default function ItemCount({stock, inicial, onAdd}){
-    const [cantidad, setCantidad] = useState(inicial);
+ export default function ItemCount({stock, onAdd}){
+    const [cantidad, setCantidad] = useState(1);
 
     const incremento = () => {
         if(cantidad < stock){

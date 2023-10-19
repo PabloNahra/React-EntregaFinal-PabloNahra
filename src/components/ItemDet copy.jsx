@@ -14,6 +14,7 @@ export default function ItemDet({id, title, description, image, price}) {
         id, title, description, image, price
     }
     addItem(item, cantidadAdd)
+
 }
     return (
         <div className="itemdet">

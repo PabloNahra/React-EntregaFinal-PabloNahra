@@ -5,12 +5,12 @@ import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
 export default function CartWidget(){
-    const {totalCant, totQuantity} = useContext(CartContext);
+    const {totQuantity} = useContext(CartContext);
 
     return(
         <Link to="/cart" style={{display: totQuantity > 0 ? 'block' : 'none'}}><div>
             <img style={{width: 40}} src={carrito} alt="carrito"/>
-            <span>{totalCant} </span>
+            <span>{totQuantity} </span>
         </div>
         </Link>
     )

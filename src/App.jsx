@@ -8,20 +8,14 @@ import { CartProvider } from './context/CartContext'
 import Cart from './components/Cart'
 
 function App() {
-  const marca = "ART MATUIZ"
-  const link1 = "Para tu bebé"
-  const link2 = "Para tu casa"
-  const link3 = "Que es una artesania"
-  const link4 = "Contacto"
-  const containerPpal = "BIENVENID@S A NUESTRA TIENDA"
-
+  
   return (
     <BrowserRouter>
       <CartProvider>
-        <NavBar title={marca} link1={link1} link2={link2} link3={link3} link4={link4}/>
+        <NavBar/>
         <Routes>
-            <Route exact path="/" element={<ItemListContainer greeting={containerPpal}/>} />
-            <Route exact path="/category/:categoryId" element={<ItemListContainer greeting={containerPpal}/>} />
+            <Route exact path="/" element={<ItemListContainer />} />
+            <Route exact path="/category/:categoryId" element={<ItemListContainer/>} />
             <Route exact path="/item/:itemId" element={<ItemDetailContainer />} />
             <Route exact path="/queesartesania" element={<p>Que es una artesania</p>} />
             <Route exact path="/contacto" element={<h1>Contacto</h1>} />

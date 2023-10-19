@@ -4,14 +4,13 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import {collection, getDocs, getFirestore, query, where} from "firebase/firestore"
 
-export default function ItemListContainer(props){
+export default function ItemListContainer(){
   const [categ, setCateg] = useState([]);
-  const [loading, setLoading] = useState(false);
   const {categoryId} = useParams();
-  
+
   useEffect(() => {
-    const db2 = getFirestore();
-    const productsRef = collection(db2, "productos");
+    const db = getFirestore();
+    const productsRef = collection(db, "productos");
 
     if(!categoryId){
       getDocs(productsRef).then((snapshot) => {
@@ -23,7 +22,7 @@ export default function ItemListContainer(props){
     })
     }
     else{
-      const db = getFirestore();
+      // const db = getFirestore();
       const q = query(collection(db, "productos"), where("categoria", "==", categoryId));
 
       getDocs(q).then((snapshot) => {
@@ -31,23 +30,14 @@ export default function ItemListContainer(props){
           const sortedCateg = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
           sortedCateg.sort((a, b) => a.nombre.localeCompare(b.nombre)); 
           setCateg(sortedCateg);
-        }else{
-            <h1>No matcheo</h1>
         }})
 
     }
   }, [categoryId]); 
 
-
-  if (loading) return <p>Categ No encontrada</p>
-
-  if (loading) {
-    return <h1>Categoria no encontrada</h1>
-  }
-    
   return(
         <main>
-            <h1>{props.greeting}</h1>
+            <h1>BIENVENID@S A NUESTRA TIENDA</h1>
             <ItemList productos={categ}></ItemList>
         </main>
     )

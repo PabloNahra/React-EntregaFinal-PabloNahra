@@ -5,7 +5,7 @@ import CartItem from "./CartItem";
 
 
 export default function Cart() {
-    const { cart, clearCart, totQuantity, tot, total, totalCant} = useContext(CartContext);
+    const { cart, clearCart, totQuantity, tot} = useContext(CartContext);
 
     if(!totQuantity){
         return(
